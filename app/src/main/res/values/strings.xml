@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">FruitHub</string>
+    <string name="get_the_fre">
+     Get The Freshest Fruit Salad Combo
+    </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="we_deliver_">We deliver the best and freshest fruit salad in town. Order for a combo today!!!</string>
+    <string name="start_order">Start Ordering</string>
+    <string name="what_is_you">What is your firstname?</string>
+    <string name="chris">  Chris</string>
+    <string name="orderBasket">Order basket</string>
+    <string name="search_for_">Search for fruit salad combos</string>
+    <string name="all">All</string>
+    <string name="saladCombo">Salad Combo</string>
+    <string name="berryCombo">Berry Combo</string>
+    <string name="mangoCombo">Mango Combo</string>
+    <string name="recommended">Recommended Combo</string>
+</resources>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".welcomeScreen">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/welcome_screen_1"
+            app:layout_constraintDimensionRatio="W,3:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/welcomeFruitBasket"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/welcome_image_2"
+            app:layout_constraintDimensionRatio="9:6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/fruitBasketShadow"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/fruitBasketShadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/welcome_image_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/imageBackground" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/descriptionHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="@string/get_the_fre"
+            style="@style/get_the_fre"
+            android:layout_margin="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/textDescription"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/textDescription"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/we_deliver_"
+            android:layout_margin="24dp"
+            style="@style/textViewChanges"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/continueButton"
+            app:layout_constraintTop_toBottomOf="@id/imageBackground"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/continueButton"
+            android:layout_width="match_parent"
+            style="@style/buttonChanges"
+            android:layout_height="56dp"
+            android:layout_margin="24dp"
+            android:text="Let's Continue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textDescription"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
