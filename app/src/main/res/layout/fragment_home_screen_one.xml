@@ -1,130 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".HomeScreenOne">
+        android:layout_height="match_parent">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/basketFloatingButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:contentDescription="@string/orderBasket"
-            android:src="@drawable/home_screen_image_1"
-            app:backgroundTint="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:maxImageSize="24dp"
-            app:tint="@color/orange" />
+        <androidx.constraintlayout.widget.ConstraintLayout
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/homeScreenSearch"
-            android:layout_width="0dp"
-            android:layout_height="56dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="24dp"
-            android:background="#F5F5F5"
-            app:layout_constraintEnd_toStartOf="@id/filterButton"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/basketFloatingButton" />
-
-        <androidx.appcompat.widget.AppCompatImageButton
-            android:id="@+id/filterButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="24dp"
-            android:background="@color/white"
-            android:src="@drawable/home_screen_image_2"
-            android:text="@string/search_for_"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/basketFloatingButton" />
-
-        <HorizontalScrollView
-            android:id="@+id/horizontalScroll"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/homeScreenSearch">
+            android:layout_height="match_parent"
+            tools:context=".HomeScreenOne">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/menuImageButton"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="4dp">
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="36dp"
+                android:src="@drawable/ic_menu_button_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/allButton"
-                    style="@style/toggleButton"
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:lineSpacingExtra="7sp"
+                android:text="@string/welcome_chr"
+                android:textColor="@color/homeTextColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/menuImageButton"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/basketCardView"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_margin="24dp"
+                app:cardCornerRadius="100dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/orange">
+
+                <com.google.android.material.imageview.ShapeableImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:elevation="10dp"
-                    android:text="@string/all"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_basket_image" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/homeScreenSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/layout_bg"
+                app:layout_constraintEnd_toStartOf="@id/filterImageButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/basketCardView">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/searchImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginStart="24dp"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/saladCombo"
-                    style="@style/toggleButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:elevation="10dp"
-                    android:text="@string/saladCombo"
-                    app:layout_constraintStart_toEndOf="@id/allButton"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/berryComboButton"
-                    style="@style/toggleButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:elevation="10dp"
-                    android:text="@string/berryCombo"
-                    app:layout_constraintStart_toEndOf="@id/saladCombo"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/mangoComboButton"
-                    style="@style/toggleButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:elevation="10dp"
-                    android:text="@string/mangoCombo"
-                    app:layout_constraintStart_toEndOf="@id/berryComboButton"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_height="12dp"
+                    android:layout_marginVertical="20dp"
+                    android:layout_marginStart="19dp"
+                    android:background="@null"
+                    android:hint="@string/search_for_"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/searchImage"
                     app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-        </HorizontalScrollView>
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/filterImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="24dp"
+                android:src="@drawable/ic_filter_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/basketCardView" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/recommendedTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_marginTop="36dp"
-            android:layout_marginStart="24dp"
-            android:text="@string/recommended"
-            style="@style/recommended"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/horizontalScroll"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/buttonRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="18dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeScreenSearch" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="24dp"
-            android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recommendedTextView"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/firstTabLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="36dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/buttonRecyclerView" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/firstViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstTabLayout" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/secondTabLayout"
+                style="@style/recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/firstViewpager" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/secondViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/secondTabLayout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </layout>

@@ -10,9 +10,6 @@
     <string name="chris">  Chris</string>
     <string name="orderBasket">Order basket</string>
     <string name="search_for_">Search for fruit salad combos</string>
-    <string name="all">All</string>
-    <string name="saladCombo">Salad Combo</string>
-    <string name="berryCombo">Berry Combo</string>
-    <string name="mangoCombo">Mango Combo</string>
     <string name="recommended">Recommended Combo</string>
+    <string name="welcome_chr">Welcome, Chris.</string>
 </resources>

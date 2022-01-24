@@ -14,13 +14,18 @@
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/textColor</item>
     </style>
-    <style name="toggleButton">
+    <style name="recyclerViewButton">
         <item name="backgroundTint">@color/white</item>
         <item name="cornerRadius">10dp</item>
         <item name="android:textColor">@color/black</item>
     </style>
     <style name="recommended">
         <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#27214D</item>
+    </style>
+    <style name="recyclerViewImage1">
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">-0.01</item>
         <item name="android:textColor">#27214D</item>
     </style>
 </resources>
