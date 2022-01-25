@@ -36,6 +36,45 @@
         android:id="@+id/homeScreenOne"
         android:name="com.example.fruithub.HomeScreenOne"
         android:label="fragment_home_screen_one"
-        tools:layout="@layout/fragment_home_screen_one" />
+        tools:layout="@layout/fragment_home_screen_one" >
+        <action
+            android:id="@+id/action_homeScreenOne_to_myBasket"
+            app:destination="@id/myBasket" />
+    </fragment>
+    <fragment
+        android:id="@+id/myBasket"
+        android:name="com.example.fruithub.MyBasket"
+        android:label="fragment_my_basket"
+        tools:layout="@layout/fragment_my_basket" >
+        <action
+            android:id="@+id/action_myBasket_to_homeScreenOne"
+            app:destination="@id/homeScreenOne" />
+        <action
+            android:id="@+id/action_myBasket_to_deliveryDetailsDialog2"
+            app:destination="@id/deliveryDetailsDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/deliveryDetailsDialog"
+        android:name="com.example.fruithub.DeliveryDetailsDialog"
+        android:label="fragment_delivery_details_dialog"
+        tools:layout="@layout/fragment_delivery_details_dialog" >
+        <action
+            android:id="@+id/action_deliveryDetailsDialog_to_addCardDetailsDialog"
+            app:destination="@id/addCardDetailsDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCardDetailsDialog"
+        android:name="com.example.fruithub.AddCardDialogBox"
+        android:label="fragment_add_card_dialog_box"
+        tools:layout="@layout/fragment_add_card_dialog_box" >
+        <action
+            android:id="@+id/action_addCardDetailsDialog_to_orderComplete"
+            app:destination="@id/orderComplete" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderComplete"
+        android:name="com.example.fruithub.OrderComplete"
+        android:label="fragment_order_complete"
+        tools:layout="@layout/fragment_order_complete" />
 
 </navigation>

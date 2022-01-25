@@ -1,6 +1,5 @@
 package com.example.fruithub
 
-import android.graphics.drawable.Drawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -16,8 +15,14 @@ class RecyclerViewCardImage : Fragment() {
     private var recyclerView1saladName: ArrayList<String> =
         arrayListOf("Honey lime combo", "Berry mango combo")
 
-    private var recyclerView1saladImage : ArrayList<Int> =
+    private var recyclerView1saladImage: ArrayList<Int> =
         arrayListOf(R.drawable.temp, R.drawable.berry_mango)
+
+    private var recyclerView1priceImage: ArrayList<Int> =
+        arrayListOf(R.drawable.ic___2000, R.drawable.ic___2000)
+
+    private val recyclerView1cardColor: ArrayList<Int> =
+            arrayListOf(R.color.white,R.color.white)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,7 +41,12 @@ class RecyclerViewCardImage : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.firstTabLayoutRecyclerView.adapter =
-            RecyclerCardImageAdapter(recyclerView1saladName, recyclerView1saladImage)
+            RecyclerCardImageAdapter(
+                recyclerView1saladName,
+                recyclerView1saladImage,
+                recyclerView1priceImage,
+                recyclerView1cardColor
+            )
     }
 
 }

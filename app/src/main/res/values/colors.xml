@@ -12,8 +12,9 @@
     <color name="lightGray">#F7F5F5</color>
     <color name="homeTextColor">#27214D</color>
     <color name="layout_bg_color">#F5F5F5</color>
-    <color name="addButtonCardView">#FFF2E7</color>
+    <color name="ButtonCardView">#FFF2E7</color>
     <color name="cardViewColor1">#FFFCF2</color>
     <color name="cardViewColor2">#FEF4F4</color>
     <color name="cardViewColor3">#F1EFF6</color>
+    <color name="lightOrange">#FCF6F0</color>
 </resources>

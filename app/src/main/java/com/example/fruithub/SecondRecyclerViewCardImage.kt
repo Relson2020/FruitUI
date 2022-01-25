@@ -22,6 +22,12 @@ class SecondRecyclerViewCardImage : Fragment() {
         R.drawable.berry_mango
     )
 
+    private var recyclerView2priceImage: ArrayList<Int> =
+        arrayListOf(R.drawable.ic__10_000, R.drawable.ic__10_000, R.drawable.ic__10_000)
+
+    private val recyclerView2cardColor: ArrayList<Int> =
+        arrayListOf(R.color.cardViewColor1, R.color.cardViewColor2, R.color.cardViewColor3)
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -40,7 +46,12 @@ class SecondRecyclerViewCardImage : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.secondTabLayoutRecyclerView.adapter =
-            RecyclerCardImageAdapter(recyclerView2saladName, recyclerView2saladImage)
+            RecyclerCardImageAdapter(
+                recyclerView2saladName,
+                recyclerView2saladImage,
+                recyclerView2priceImage,
+                recyclerView2cardColor
+            )
     }
 
 }

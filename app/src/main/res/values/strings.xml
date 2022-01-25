@@ -12,4 +12,20 @@
     <string name="search_for_">Search for fruit salad combos</string>
     <string name="recommended">Recommended Combo</string>
     <string name="welcome_chr">Welcome, Chris.</string>
+    <string name="go_back">Go back</string>
+    <string name="my_basket">My Basket</string>
+    <string name="checkout">Checkout</string>
+    <string name="total">Total</string>
+    <string name="packs">2packs</string>
+    <string name="your_delivery">Your delivery address</string>
+    <string name="th_avenue_l">10th avenue, Lekki, Lagos.</string>
+    <string name="number_we_c">Number we can call</string>
+    <string name="some_no">09090909090</string>
+    <string name="pay_on_deli">Pay on delivery</string>
+    <string name="pay_with_ca">Pay with card</string>
+    <string name="card_holder">Card holder\'s name</string>
+    <string name="date">Date</string>
+    <string name="cvv">CVV</string>
+    <string name="mm_yy">MM/YY</string>
+    <string name="complete_or">Complete order</string>
 </resources>

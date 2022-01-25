@@ -2,7 +2,6 @@ package com.example.fruithub
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.databinding.DataBindingUtil
 import com.example.fruithub.databinding.ActivityMainBinding
 

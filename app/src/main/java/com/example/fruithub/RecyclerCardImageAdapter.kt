@@ -1,6 +1,5 @@
 package com.example.fruithub
 
-import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,12 +10,19 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerCardImageAdapter(
     private val saladName: ArrayList<String>,
-    private val saladImage: ArrayList<Int>
+    private val saladImage: ArrayList<Int>,
+    private val priceImage: ArrayList<Int>,
+    private val cardColor : ArrayList<Int>
 ) : RecyclerView.Adapter<RecyclerCardImageAdapter.ViewHolder>() {
+
+    private val context = ApplicationClass()
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val text: TextView = itemView.findViewById(R.id.saladName)
-        val image: ImageView = itemView.findViewById(R.id.saladImage)
-        val cardView : CardView = itemView.findViewById(R.id.cardViewTemplate)
+        val saladImage: ImageView = itemView.findViewById(R.id.saladImage)
+        val priceImage : ImageView = itemView.findViewById(R.id.saladPriceImage)
+        val cardBg : CardView = itemView.findViewById(R.id.cardViewTemplate)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -27,7 +33,9 @@ class RecyclerCardImageAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.text.text = saladName[position]
-        holder.image.setImageResource(saladImage[position])
+        holder.saladImage.setImageResource(saladImage[position])
+        holder.priceImage.setImageResource(priceImage[position])
+        holder.cardBg.setBackgroundResource(cardColor[position])
     }
 
     override fun getItemCount(): Int {

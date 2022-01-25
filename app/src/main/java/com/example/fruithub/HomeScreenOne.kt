@@ -6,12 +6,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.Navigation
 import com.example.fruithub.databinding.FragmentHomeScreenOneBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
 class HomeScreenOne : Fragment() {
 
     private lateinit var binding: FragmentHomeScreenOneBinding
+
     private var buttonArray: ArrayList<String> =
         arrayListOf("All", "Salad Combo", "Berry Combo", "Mango Combo")
 
@@ -50,5 +52,9 @@ class HomeScreenOne : Fragment() {
                 else -> {}
             }
         }.attach()
+
+        binding.basketCardView.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_homeScreenOne_to_myBasket)
+        }
     }
 }

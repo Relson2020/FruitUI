@@ -1,6 +1,5 @@
 package com.example.fruithub
 
-import android.app.ActionBar
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -30,6 +29,6 @@ class SplashScreen : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         Handler(Looper.getMainLooper()).postDelayed({
             Navigation.findNavController(view).navigate(R.id.action_splashScreen_to_welcomeScreen)
-        },1500)
+        },1000)
     }
 }
