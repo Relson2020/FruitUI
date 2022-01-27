@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.fruithub.databinding.FragmentHomeScreenOneBinding
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -22,7 +22,7 @@ class HomeScreenOne : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        // data binding
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_home_screen_one, container, false)
 
@@ -32,18 +32,23 @@ class HomeScreenOne : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // recycler view for button adapter
         binding.buttonRecyclerView.adapter = RecyclerButtonAdapter(buttonArray)
 
+        // first tabLayout viewPager
         binding.firstViewpager.adapter = FirstViewPager(parentFragmentManager,lifecycle)
 
+        // first tabLayout
         TabLayoutMediator(binding.firstTabLayout,binding.firstViewpager){ tab ,position ->
             when(position){
                 0 -> tab.text = "Recommended Combo"
             }
         }.attach()
 
+        // second tabLayout viewpager
         binding.secondViewpager.adapter = SecondViewPager(parentFragmentManager,lifecycle)
 
+        // second tabLayout
         TabLayoutMediator(binding.secondTabLayout,binding.secondViewpager){tab,position ->
             when(position){
                 0 -> tab.text = "Hottest"
@@ -53,8 +58,9 @@ class HomeScreenOne : Fragment() {
             }
         }.attach()
 
+        // navigating to myBasket fragment
         binding.basketCardView.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_homeScreenOne_to_myBasket)
+            it.findNavController().navigate(R.id.action_homeScreenOne_to_myBasket)
         }
     }
 }

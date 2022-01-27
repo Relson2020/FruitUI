@@ -9,7 +9,7 @@
         android:id="@+id/splashScreen"
         android:name="com.example.fruithub.SplashScreen"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_splash_screen" >
+        tools:layout="@layout/fragment_splash_screen">
         <action
             android:id="@+id/action_splashScreen_to_welcomeScreen"
             app:destination="@id/welcomeScreen" />
@@ -18,7 +18,7 @@
         android:id="@+id/welcomeScreen"
         android:name="com.example.fruithub.welcomeScreen"
         android:label="fragment_welcome_screen"
-        tools:layout="@layout/fragment_welcome_screen" >
+        tools:layout="@layout/fragment_welcome_screen">
         <action
             android:id="@+id/action_welcomeScreen_to_authentication"
             app:destination="@id/authentication" />
@@ -27,7 +27,7 @@
         android:id="@+id/authentication"
         android:name="com.example.fruithub.Authentication"
         android:label="fragment_authentication"
-        tools:layout="@layout/fragment_authentication" >
+        tools:layout="@layout/fragment_authentication">
         <action
             android:id="@+id/action_authentication_to_homeScreenOne"
             app:destination="@id/homeScreenOne" />
@@ -36,7 +36,7 @@
         android:id="@+id/homeScreenOne"
         android:name="com.example.fruithub.HomeScreenOne"
         android:label="fragment_home_screen_one"
-        tools:layout="@layout/fragment_home_screen_one" >
+        tools:layout="@layout/fragment_home_screen_one">
         <action
             android:id="@+id/action_homeScreenOne_to_myBasket"
             app:destination="@id/myBasket" />
@@ -45,28 +45,21 @@
         android:id="@+id/myBasket"
         android:name="com.example.fruithub.MyBasket"
         android:label="fragment_my_basket"
-        tools:layout="@layout/fragment_my_basket" >
+        tools:layout="@layout/fragment_my_basket">
         <action
             android:id="@+id/action_myBasket_to_homeScreenOne"
             app:destination="@id/homeScreenOne" />
-        <action
-            android:id="@+id/action_myBasket_to_deliveryDetailsDialog2"
-            app:destination="@id/deliveryDetailsDialog" />
     </fragment>
     <fragment
         android:id="@+id/deliveryDetailsDialog"
         android:name="com.example.fruithub.DeliveryDetailsDialog"
         android:label="fragment_delivery_details_dialog"
-        tools:layout="@layout/fragment_delivery_details_dialog" >
-        <action
-            android:id="@+id/action_deliveryDetailsDialog_to_addCardDetailsDialog"
-            app:destination="@id/addCardDetailsDialog" />
-    </fragment>
+        tools:layout="@layout/fragment_delivery_details_dialog" />
     <fragment
         android:id="@+id/addCardDetailsDialog"
         android:name="com.example.fruithub.AddCardDialogBox"
         android:label="fragment_add_card_dialog_box"
-        tools:layout="@layout/fragment_add_card_dialog_box" >
+        tools:layout="@layout/fragment_add_card_dialog_box">
         <action
             android:id="@+id/action_addCardDetailsDialog_to_orderComplete"
             app:destination="@id/orderComplete" />
@@ -75,6 +68,27 @@
         android:id="@+id/orderComplete"
         android:name="com.example.fruithub.OrderComplete"
         android:label="fragment_order_complete"
-        tools:layout="@layout/fragment_order_complete" />
+        tools:layout="@layout/fragment_order_complete" >
+        <action
+            android:id="@+id/action_orderComplete_to_homeScreenOne"
+            app:destination="@id/homeScreenOne" />
+        <action
+            android:id="@+id/action_orderComplete_to_orderList"
+            app:destination="@id/orderList" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderList"
+        android:name="com.example.fruithub.OrderList"
+        android:label="fragment_order_list"
+        tools:layout="@layout/fragment_order_list" >
+        <action
+            android:id="@+id/action_orderList_to_myBasket"
+            app:destination="@id/myBasket" />
+    </fragment>
+    <fragment
+        android:id="@+id/addToBasket"
+        android:name="com.example.fruithub.AddToBasket"
+        android:label="fragment_add_to_basket"
+        tools:layout="@layout/fragment_add_to_basket" />
 
 </navigation>

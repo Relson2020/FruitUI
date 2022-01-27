@@ -7,10 +7,12 @@
         <entry key="app/src/main/res/drawable/card_view.xml" value="0.1574074074074074" />
         <entry key="app/src/main/res/drawable/currency_image.xml" value="0.17592592592592593" />
         <entry key="app/src/main/res/drawable/ic__0_000.xml" value="0.13425925925925927" />
+        <entry key="app/src/main/res/drawable/ic__20000_big.xml" value="0.12222222222222222" />
         <entry key="app/src/main/res/drawable/ic__20_000.xml" value="0.13425925925925927" />
         <entry key="app/src/main/res/drawable/ic___2000.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/drawable/ic_back_arrow.xml" value="0.13425925925925927" />
         <entry key="app/src/main/res/drawable/ic_basket_image.xml" value="0.12083333333333333" />
+        <entry key="app/src/main/res/drawable/ic_currency_black_image.xml" value="0.12222222222222222" />
         <entry key="app/src/main/res/drawable/ic_currency_image.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/drawable/ic_filter_button.xml" value="0.16111111111111112" />
         <entry key="app/src/main/res/drawable/ic_honey_lime_peach_fruit_salad.xml" value="0.16111111111111112" />
@@ -25,6 +27,7 @@
         <entry key="app/src/main/res/drawable/welcome_screen_1.xml" value="0.17592592592592593" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.17769671704012507" />
         <entry key="app/src/main/res/layout/fragment_add_card_dialog_box.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_add_to_basket.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_authentication.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_button_template.xml" value="0.6820809248554913" />
         <entry key="app/src/main/res/layout/fragment_card_view_template.xml" value="0.33" />
@@ -33,7 +36,8 @@
         <entry key="app/src/main/res/layout/fragment_home_screen_one.xml" value="0.21" />
         <entry key="app/src/main/res/layout/fragment_my_basket.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_my_basket_card_view_template.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/fragment_order_complete.xml" value="0.17760416666666667" />
+        <entry key="app/src/main/res/layout/fragment_order_complete.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/fragment_order_list.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_recycler_view_card_image.xml" value="0.1625" />
         <entry key="app/src/main/res/layout/fragment_scrolling.xml" value="0.17760416666666667" />
         <entry key="app/src/main/res/layout/fragment_second_recycler_view_card_image.xml" value="0.17760416666666667" />

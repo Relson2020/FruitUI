@@ -15,7 +15,6 @@ class RecyclerCardImageAdapter(
     private val cardColor : ArrayList<Int>
 ) : RecyclerView.Adapter<RecyclerCardImageAdapter.ViewHolder>() {
 
-    private val context = ApplicationClass()
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val text: TextView = itemView.findViewById(R.id.saladName)

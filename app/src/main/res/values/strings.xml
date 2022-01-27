@@ -17,6 +17,7 @@
     <string name="checkout">Checkout</string>
     <string name="total">Total</string>
     <string name="packs">2packs</string>
+    <string name="letsContinue">Let\'s Continue</string>
     <string name="your_delivery">Your delivery address</string>
     <string name="th_avenue_l">10th avenue, Lekki, Lagos.</string>
     <string name="number_we_c">Number we can call</string>
@@ -28,4 +29,17 @@
     <string name="cvv">CVV</string>
     <string name="mm_yy">MM/YY</string>
     <string name="complete_or">Complete order</string>
+    <string name="order_taken">Order Taken</string>
+    <string name="your_order_">Your order have been taken and is being attended to</string>
+    <string name="continue_sh">Continue shopping</string>
+    <string name="track_order">Track order</string>
+    <string name="delivery_st">Delivery Status</string>
+    <string name="order_is_processing">Order is being processed</string>
+    <string name="order_is_delivered">Order is being delivered</string>
+    <string name="your_meal_is_on_its_way">Your meal is on it\'s way!!</string>
+    <string name="quinoa_fruit_salad">Quinoa Fruit Salad</string>
+    <string name="add_to_bask">Add To Basket</string>
+    <string name="if_you_are_">
+        If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make
+    </string>
 </resources>

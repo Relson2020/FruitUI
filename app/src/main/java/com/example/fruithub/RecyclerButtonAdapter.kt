@@ -7,6 +7,7 @@ import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerButtonAdapter(private val buttonName : ArrayList<String>) : RecyclerView.Adapter<RecyclerButtonAdapter.ViewHolder>() {
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val button: Button = itemView.findViewById(R.id.button)
     }

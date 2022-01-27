@@ -13,18 +13,21 @@ class SecondRecyclerViewCardImage : Fragment() {
 
     private lateinit var binding: FragmentSecondRecyclerViewCardImageBinding
 
+    // salad name array
     private var recyclerView2saladName: ArrayList<String> =
         arrayListOf("Quinoa fruit salad", "Tropical fruit salad", "Melon fruit salad")
 
+    // salad image array
     private var recyclerView2saladImage = arrayListOf(
         R.drawable.quinoa_fruit_salad,
         R.drawable.tropical_fruit_salad,
         R.drawable.berry_mango
     )
-
+    // price image array
     private var recyclerView2priceImage: ArrayList<Int> =
         arrayListOf(R.drawable.ic__10_000, R.drawable.ic__10_000, R.drawable.ic__10_000)
 
+    // cardView background color array
     private val recyclerView2cardColor: ArrayList<Int> =
         arrayListOf(R.color.cardViewColor1, R.color.cardViewColor2, R.color.cardViewColor3)
 
@@ -32,7 +35,7 @@ class SecondRecyclerViewCardImage : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        // data binding
         binding = DataBindingUtil.inflate(
             inflater,
             R.layout.fragment_second_recycler_view_card_image,
@@ -45,6 +48,7 @@ class SecondRecyclerViewCardImage : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // recycler view for second tabLayout
         binding.secondTabLayoutRecyclerView.adapter =
             RecyclerCardImageAdapter(
                 recyclerView2saladName,

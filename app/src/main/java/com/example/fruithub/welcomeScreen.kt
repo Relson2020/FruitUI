@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.fruithub.databinding.FragmentWelcomeScreenBinding
 
 class welcomeScreen : Fragment() {
@@ -17,7 +17,7 @@ class welcomeScreen : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        // data binding
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_welcome_screen, container, false)
 
@@ -26,8 +26,10 @@ class welcomeScreen : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // navigating to authentication fragment
         binding.continueButton.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_welcomeScreen_to_authentication)
+            it.findNavController().navigate(R.id.action_welcomeScreen_to_authentication)
         }
     }
 

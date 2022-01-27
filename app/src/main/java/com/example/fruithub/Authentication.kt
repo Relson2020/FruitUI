@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.fruithub.databinding.FragmentAuthenticationBinding
 
 class Authentication : Fragment() {
@@ -16,7 +16,7 @@ class Authentication : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
+        // data binding
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_authentication, container, false)
 
         return binding.root
@@ -24,8 +24,10 @@ class Authentication : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // navigating to homeScreen
         binding.startOrdering.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_authentication_to_homeScreenOne)
+            it.findNavController().navigate(R.id.action_authentication_to_homeScreenOne)
         }
     }
 }

@@ -3,11 +3,11 @@ package com.example.fruithub
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.fruithub.databinding.FragmentSplashScreenBinding
 
@@ -27,8 +27,10 @@ class SplashScreen : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // handler for schedule time delay
         Handler(Looper.getMainLooper()).postDelayed({
             Navigation.findNavController(view).navigate(R.id.action_splashScreen_to_welcomeScreen)
-        },1000)
+        }, 1000)
     }
 }
