@@ -30,7 +30,8 @@
     <string name="mm_yy">MM/YY</string>
     <string name="complete_or">Complete order</string>
     <string name="order_taken">Order Taken</string>
-    <string name="your_order_">Your order have been taken and is being attended to</string>
+    <string name="your_order_1">Your order have been taken and is</string>
+    <string name="your_order_2">being attended to</string>
     <string name="continue_sh">Continue shopping</string>
     <string name="track_order">Track order</string>
     <string name="delivery_st">Delivery Status</string>
@@ -42,4 +43,5 @@
     <string name="if_you_are_">
         If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make
     </string>
+    <string name="this_combo_contains">This combo contains:</string>
 </resources>

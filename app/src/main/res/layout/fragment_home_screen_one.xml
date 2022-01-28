@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:context=".HomeScreenOne">
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            tools:context=".HomeScreenOne"
+            tools:ignore="RtlSymmetry">
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/menuImageButton"
@@ -23,13 +25,13 @@
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
-                android:layout_height="24dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="34dp"
                 android:lineSpacingExtra="7sp"
                 android:text="@string/welcome_chr"
                 android:textColor="@color/homeTextColor"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@id/menuImageButton"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -102,54 +104,93 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/basketCardView" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/buttonRecyclerView"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttonRecyclerViewConstraint"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:background="@color/whiteLightGray"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/homeScreenSearch" />
+                app:layout_constraintTop_toBottomOf="@id/homeScreenSearch">
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/firstTabLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="36dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/buttonRecyclerView"
-                app:tabTextAppearance="@style/recommended" />
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/buttonRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/firstViewpager"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/firstTabLayout" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/secondTabLayout"
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/homeScreenRecommendedTextView"
                 style="@style/recommended"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:text="@string/recommended"
+                android:layout_marginStart="24dp"
                 android:layout_marginTop="40dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/firstViewpager"
-                app:tabTextAppearance="@style/recommended" />
+                app:layout_constraintTop_toBottomOf="@id/buttonRecyclerViewConstraint"/>
 
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/secondViewpager"
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="6dp"
+                android:src="@drawable/ic_line_8"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/homeScreenRecommendedTextView" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:background="@color/whiteLightGray"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/secondTabLayout" />
+                app:layout_constraintTop_toBottomOf="@id/homeScreenRecommendedTextView">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recommendedRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/secondTabLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="40dp"
+                    android:background="@color/whiteLightGray"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/recommendedRecyclerView"
+                    app:tabTextAppearance="@style/recommended" />
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/secondViewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/secondTabLayout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

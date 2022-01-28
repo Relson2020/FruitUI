@@ -1,85 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.core.widget.NestedScrollView
-        tools:context=".welcomeScreen"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:fillViewport="true">
-       
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:fillViewport="true"
+        tools:context=".welcomeScreen">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imageBackground"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/welcome_screen_1"
-            app:layout_constraintDimensionRatio="W,3:3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/welcomeFruitBasket"
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:src="@drawable/welcome_image_2"
-            app:layout_constraintDimensionRatio="7:7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/fruitBasketShadow"/>
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/fruitBasketShadow"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:src="@drawable/welcome_image_3"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/imageBackground" />
+            android:layout_height="match_parent">
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/descriptionHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="19dp"
-            android:text="@string/get_the_fre"
-            style="@style/get_the_fre"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="40dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imageBackground"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/welcome_screen_1"
+                app:layout_constraintDimensionRatio="W,3:3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/textDescription"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:text="@string/we_deliver_"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="8dp"
-            style="@style/textViewChanges"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/descriptionHeader"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/welcomeFruitBasket"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:src="@drawable/welcome_image_2"
+                app:layout_constraintBottom_toTopOf="@id/fruitBasketShadow"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/continueButton"
-            android:layout_width="match_parent"
-            style="@style/buttonChanges"
-            android:layout_height="56dp"
-            android:layout_margin="24dp"
-            android:text="@string/letsContinue"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textDescription"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fruitBasketShadow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:src="@drawable/welcome_image_3"
+                app:layout_constraintBottom_toBottomOf="@id/imageBackground"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/descriptionHeader"
+                style="@style/get_the_fre"
+                android:layout_width="wrap_content"
+                android:layout_height="19dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="40dp"
+                android:text="@string/get_the_fre"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageBackground" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textDescription"
+                style="@style/textViewChanges"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="56dp"
+                android:text="@string/we_deliver_"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/descriptionHeader" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueButton"
+                style="@style/buttonChanges"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:layout_margin="24dp"
+                android:stateListAnimator="@null"
+                android:text="@string/letsContinue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textDescription" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </layout>

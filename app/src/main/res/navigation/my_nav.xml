@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_homeScreenOne_to_myBasket"
             app:destination="@id/myBasket" />
+        <action
+            android:id="@+id/action_homeScreenOne_to_addToBasket"
+            app:destination="@id/addToBasket" />
     </fragment>
     <fragment
         android:id="@+id/myBasket"
@@ -49,20 +52,6 @@
         <action
             android:id="@+id/action_myBasket_to_homeScreenOne"
             app:destination="@id/homeScreenOne" />
-    </fragment>
-    <fragment
-        android:id="@+id/deliveryDetailsDialog"
-        android:name="com.example.fruithub.DeliveryDetailsDialog"
-        android:label="fragment_delivery_details_dialog"
-        tools:layout="@layout/fragment_delivery_details_dialog" />
-    <fragment
-        android:id="@+id/addCardDetailsDialog"
-        android:name="com.example.fruithub.AddCardDialogBox"
-        android:label="fragment_add_card_dialog_box"
-        tools:layout="@layout/fragment_add_card_dialog_box">
-        <action
-            android:id="@+id/action_addCardDetailsDialog_to_orderComplete"
-            app:destination="@id/orderComplete" />
     </fragment>
     <fragment
         android:id="@+id/orderComplete"
@@ -76,6 +65,7 @@
             android:id="@+id/action_orderComplete_to_orderList"
             app:destination="@id/orderList" />
     </fragment>
+
     <fragment
         android:id="@+id/orderList"
         android:name="com.example.fruithub.OrderList"

@@ -55,29 +55,42 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imageBackground" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/textDescription"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/authenticationEditText"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="wrap_content"
                 android:layout_marginHorizontal="24dp"
                 android:layout_marginTop="17dp"
-                android:background="#F7F5F5"
-                android:hint="@string/chris"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/descriptionHeader" />
+                android:background="@drawable/layout_bg"
+                app:layout_constraintTop_toBottomOf="@id/descriptionHeader">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginStart="15dp"
+                    android:background="@null"
+                    android:hint="@string/chris"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/startOrdering"
                 style="@style/buttonChanges"
                 android:layout_width="match_parent"
-                android:layout_height="56dp"
+                android:layout_height="68dp"
                 android:layout_margin="24dp"
+                android:stateListAnimator="@null"
                 android:text="@string/start_order"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textDescription" />
+                app:layout_constraintTop_toBottomOf="@id/authenticationEditText" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
