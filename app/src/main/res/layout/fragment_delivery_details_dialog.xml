@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:paddingHorizontal="@dimen/_24sdp"
+        android:paddingTop="@dimen/_32sdp"
+        android:paddingBottom="@dimen/_24sdp"
+        tools:context=".DeliveryDetailsDialog">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/addressTextView"
+                style="@style/dialogBoxTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:text="@string/your_delivery"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/addressConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:background="@drawable/layout_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addressTextView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/addressEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_margin="@dimen/_14sdp"
+                    android:background="@null"
+                    android:hint="@string/th_avenue_l"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/numberTextView"
+                style="@style/dialogBoxTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/number_we_c"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/addressConstraint" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/numberConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:background="@drawable/layout_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numberTextView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/numberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_margin="@dimen/_14sdp"
+                    android:background="@null"
+                    android:hint="@string/some_no"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/payOnDeliveryButton"
+                style="@style/deliveryDialogButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_28sdp"
+                android:stateListAnimator="@null"
+                android:text="@string/pay_on_deli"
+                app:layout_constraintEnd_toStartOf="@id/payWithCardButton"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/numberConstraint" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/payWithCardButton"
+                style="@style/deliveryDialogButton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginTop="@dimen/_35sdp"
+                android:stateListAnimator="@null"
+                android:text="@string/pay_with_ca"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/payOnDeliveryButton"
+                app:layout_constraintTop_toBottomOf="@id/numberConstraint" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

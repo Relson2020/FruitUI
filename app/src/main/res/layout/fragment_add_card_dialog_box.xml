@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".AddCardDialogBox">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="@dimen/_24sdp"
+            android:paddingEnd="@dimen/_24sdp"
+            android:paddingTop="@dimen/_30sdp"
+            android:paddingBottom="@dimen/_22sdp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cardHolderNameTextView"
+                style="@style/dialogBoxTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:text="@string/card_holder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardHolderNameConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:background="@drawable/layout_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardHolderNameTextView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cardHolderNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_margin="@dimen/_14sdp"
+                    android:background="@null"
+                    android:hint="@string/th_avenue_l"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/cardNumberTextView"
+                style="@style/dialogBoxTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:text="@string/number_we_c"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardHolderNameConstraint" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cardNumberConstraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:background="@drawable/layout_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardNumberTextView">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/cardNumberEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_margin="@dimen/_14sdp"
+                    android:background="@null"
+                    android:hint="@string/number_we_c"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/dateConstraint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_27sdp"
+                app:layout_constraintEnd_toStartOf="@id/CVVConstraint"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardNumberConstraint">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dateTextView"
+                    style="@style/dialogBoxTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="@string/date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:background="@drawable/layout_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dateTextView">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dateEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_margin="@dimen/_14sdp"
+                        android:background="@null"
+                        android:hint="@string/mm_yy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/CVVConstraint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dateConstraint"
+                app:layout_constraintTop_toBottomOf="@id/cardNumberConstraint">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/CVVTextView"
+                    style="@style/dialogBoxTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_24sdp"
+                    android:text="@string/cvv"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_17sdp"
+                    android:background="@drawable/layout_bg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/CVVTextView">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/CVVEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_22sdp"
+                        android:layout_margin="@dimen/_14sdp"
+                        android:background="@null"
+                        android:hint="@string/mm_yy"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/completeOrderButton"
+                style="@style/buttonChanges"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginStart="@dimen/_50sdp"
+                android:layout_marginEnd="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_32sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+                android:stateListAnimator="@null"
+                android:text="@string/complete_or"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dateConstraint" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

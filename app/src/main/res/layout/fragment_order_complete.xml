@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".OrderComplete">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/orderTakenTextView"
+                style="@style/order_taken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/order_taken"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:src="@drawable/ic_order_complete_image"
+                app:layout_constraintBottom_toTopOf="@id/orderTakenTextView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/yourOrderDescription1"
+                style="@style/your_order_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_64sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:layout_marginEnd="@dimen/_64sdp"
+                android:text="@string/your_order_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/orderTakenTextView" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/yourOrderDescription2"
+                style="@style/your_order_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="@string/your_order_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yourOrderDescription1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/continueShoppingButton"
+                style="@style/deliveryDialogButton"
+                android:layout_width="match_parent"
+                android:minWidth="0dp"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginStart="@dimen/_85sdp"
+                android:layout_marginEnd="@dimen/_85sdp"
+                android:stateListAnimator="@null"
+                android:text="@string/continue_sh"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yourOrderDescription2" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/trackOrderButton"
+                style="@style/buttonChanges"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_56sdp"
+                android:layout_marginStart="@dimen/_73sdp"
+                android:layout_marginEnd="@dimen/_73sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:stateListAnimator="@null"
+                android:text="@string/track_order"
+                app:layout_constraintBottom_toTopOf="@id/continueShoppingButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/yourOrderDescription2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

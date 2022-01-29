@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/orange"
+        tools:context=".OrderList">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/orderListGoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginTop="@dimen/_36sdp"
+            app:cardCornerRadius="@dimen/_15sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/backArrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:src="@drawable/ic_back_arrow"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/goBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:text="@string/go_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/backArrow"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/orderListTextView"
+            style="@style/my_basket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:text="@string/delivery_st"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/orderListTextView">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_24sdp"
+                android:paddingTop="@dimen/_40sdp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/orderTakenConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/orderTakenImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:src="@drawable/order_list_image1"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/order_list_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_19sdp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/order_taken"
+                        app:layout_constraintStart_toEndOf="@id/orderTakenImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/green"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_order_list_image_tick" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:layout_marginStart="32dp"
+                    android:src="@drawable/order_list_image7"
+                    app:layout_constraintBottom_toTopOf="@id/orderProcessingConstraint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderTakenConstraint" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/orderProcessingConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/orderDeliveredConstraint"
+                    app:layout_constraintTop_toBottomOf="@id/orderTakenConstraint">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/orderProcessingImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:src="@drawable/order_list_image2"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/order_list_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/order_is_processing"
+                        app:layout_constraintStart_toEndOf="@id/orderProcessingImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="20dp"
+                        android:backgroundTint="@color/green"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_order_list_image_tick" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="3dp"
+                    android:layout_marginStart="32dp"
+                    android:src="@drawable/order_list_image7"
+                    app:layout_constraintBottom_toTopOf="@id/orderDeliveredConstraint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderProcessingConstraint" />
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/orderDeliveredConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toTopOf="@id/orderListMapImageView"
+                    app:layout_constraintTop_toBottomOf="@id/orderProcessingConstraint">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/orderDeliveredImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:src="@drawable/order_list_image3"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/orderDeliveredTextView"
+                        style="@style/order_list_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/order_is_delivered"
+                        app:layout_constraintStart_toEndOf="@id/orderDeliveredImage"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/order_list_delivered_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/your_meal_is_on_its_way"
+                        app:layout_constraintStart_toEndOf="@id/orderDeliveredImage"
+                        app:layout_constraintTop_toBottomOf="@id/orderDeliveredTextView" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:backgroundTint="@color/orange"
+                        app:cardCornerRadius="100dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_call" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@drawable/order_list_image7"
+                    app:layout_constraintBottom_toTopOf="@id/orderListMapImageView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderDeliveredConstraint" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/orderListMapImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/order_list_image4"
+                    app:layout_constraintBottom_toBottomOf="@id/orderReceivedConstraint"
+                    app:layout_constraintDimensionRatio="H,2:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderDeliveredConstraint" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginBottom="3dp"
+                    android:src="@drawable/order_list_image7"
+                    app:layout_constraintBottom_toTopOf="@id/orderReceivedConstraint"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderListMapImageView" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/orderReceivedConstraint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/orderListMapImageView">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/orderReceivedImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/order_list_image5"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/order_list_image6"
+                        app:layout_constraintBottom_toBottomOf="@id/orderReceivedImage"
+                        app:layout_constraintDimensionRatio="H,1:1"
+                        app:layout_constraintEnd_toEndOf="@id/orderReceivedImage"
+                        app:layout_constraintStart_toStartOf="@id/orderReceivedImage"
+                        app:layout_constraintTop_toTopOf="@id/orderReceivedImage" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/orderReceivedTextView"
+                        style="@style/order_list_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="19dp"
+                        android:layout_marginStart="16dp"
+                        android:text="@string/order_is_delivered"
+                        app:layout_constraintStart_toEndOf="@id/orderReceivedImage"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/orderListLoadingCircle1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_loading_circle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/orderListLoadingCircle2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_loading_circle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/orderListLoadingCircle1"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/orderListLoadingCircle3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_loading_circle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/orderListLoadingCircle2"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
