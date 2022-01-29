@@ -6,21 +6,22 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerCardImageAdapter(
-    private val saladName: ArrayList<String>,
+    private val saladName: ArrayList<Int>,
     private val saladImage: ArrayList<Int>,
     private val priceImage: ArrayList<Int>,
-    private val cardColor : ArrayList<Int>
+    private val cardColor: ArrayList<Int>
 ) : RecyclerView.Adapter<RecyclerCardImageAdapter.ViewHolder>() {
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val text: TextView = itemView.findViewById(R.id.saladName)
         val saladImage: ImageView = itemView.findViewById(R.id.saladImage)
-        val priceImage : ImageView = itemView.findViewById(R.id.saladPriceImage)
-        val cardBg : CardView = itemView.findViewById(R.id.cardViewTemplate)
+        val priceImage: ImageView = itemView.findViewById(R.id.saladPriceImage)
+        val cardBg: CardView = itemView.findViewById(R.id.cardViewTemplate)
 
     }
 
@@ -31,10 +32,15 @@ class RecyclerCardImageAdapter(
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.text.text = saladName[position]
+        holder.text.setText(saladName[position])
         holder.saladImage.setImageResource(saladImage[position])
         holder.priceImage.setImageResource(priceImage[position])
-        holder.cardBg.setBackgroundResource(cardColor[position])
+        holder.cardBg.setCardBackgroundColor(
+            ContextCompat.getColor(
+                holder.cardBg.context,
+                cardColor[position]
+            )
+        )
     }
 
     override fun getItemCount(): Int {

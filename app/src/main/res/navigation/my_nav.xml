@@ -52,6 +52,9 @@
         <action
             android:id="@+id/action_myBasket_to_homeScreenOne"
             app:destination="@id/homeScreenOne" />
+        <action
+            android:id="@+id/action_myBasket_to_orderComplete"
+            app:destination="@id/orderComplete" />
     </fragment>
     <fragment
         android:id="@+id/orderComplete"
@@ -79,6 +82,10 @@
         android:id="@+id/addToBasket"
         android:name="com.example.fruithub.AddToBasket"
         android:label="fragment_add_to_basket"
-        tools:layout="@layout/fragment_add_to_basket" />
+        tools:layout="@layout/fragment_add_to_basket" >
+        <action
+            android:id="@+id/action_addToBasket_to_homeScreenOne"
+            app:destination="@id/homeScreenOne" />
+    </fragment>
 
 </navigation>

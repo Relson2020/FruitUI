@@ -61,4 +61,8 @@ dependencies {
     // flexBox
     implementation 'com.google.android:flexbox:2.0.1'
 
+    /** Dimensions */
+    def intuit_version = "1.0.6"
+    implementation "com.intuit.sdp:sdp-android:$intuit_version"
+    implementation "com.intuit.ssp:ssp-android:$intuit_version"
 }

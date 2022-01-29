@@ -14,8 +14,8 @@ class SecondRecyclerViewCardImage : Fragment() {
     private lateinit var binding: FragmentSecondRecyclerViewCardImageBinding
 
     // salad name array
-    private var recyclerView2saladName: ArrayList<String> =
-        arrayListOf("Quinoa fruit salad", "Tropical fruit salad", "Melon fruit salad")
+    private var recyclerView2saladName: ArrayList<Int> =
+        arrayListOf(R.string.quinoa_frui,R.string.tropical_fr,R.string.melon_fruit)
 
     // salad image array
     private var recyclerView2saladImage = arrayListOf(

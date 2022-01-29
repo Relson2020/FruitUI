@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.recyclerview.widget.RecyclerView
 
-class RecyclerButtonAdapter(private val buttonName : ArrayList<String>) : RecyclerView.Adapter<RecyclerButtonAdapter.ViewHolder>() {
+class RecyclerButtonAdapter(private val buttonName : ArrayList<Int>) : RecyclerView.Adapter<RecyclerButtonAdapter.ViewHolder>() {
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val button: Button = itemView.findViewById(R.id.button)
@@ -18,7 +18,7 @@ class RecyclerButtonAdapter(private val buttonName : ArrayList<String>) : Recycl
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.button.text = buttonName[position]
+        holder.button.setText(buttonName[position])
     }
 
     override fun getItemCount(): Int {

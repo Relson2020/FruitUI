@@ -15,12 +15,12 @@ class HomeScreenOne : Fragment() {
     private lateinit var binding: FragmentHomeScreenOneBinding
 
     // button name array
-    private var buttonArray: ArrayList<String> =
-        arrayListOf("All", "Salad Combo", "Berry Combo", "Mango Combo")
+    private var buttonArray: ArrayList<Int> =
+        arrayListOf(R.string.all,R.string.saladCombo,R.string.berryCombo,R.string.mangoBerry)
 
     // salad name array
-    private var recyclerView1saladName: ArrayList<String> =
-        arrayListOf("Honey lime combo", "Berry mango combo")
+    private var recyclerView1saladName: ArrayList<Int> =
+        arrayListOf(R.string.honey_lime_,R.string.berry_mango)
 
     // salad image array
     private var recyclerView1saladImage: ArrayList<Int> =
@@ -75,6 +75,11 @@ class HomeScreenOne : Fragment() {
 
         // navigating to myBasket fragment
         binding.basketCardView.setOnClickListener {
+            it.findNavController().navigate(R.id.action_homeScreenOne_to_myBasket)
+        }
+
+        // navigating to addToBasket fragment
+        binding.filterImageButton.setOnClickListener {
             it.findNavController().navigate(R.id.action_homeScreenOne_to_addToBasket)
         }
     }

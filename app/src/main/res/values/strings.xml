@@ -44,4 +44,13 @@
         If you are looking for a new fruit salad to eat today, quinoa is the perfect brunch for you. make
     </string>
     <string name="this_combo_contains">This combo contains:</string>
+    <string name="all">All</string>
+    <string name="saladCombo">Salad Combo</string>
+    <string name="berryCombo">Berry Combo</string>
+    <string name="mangoBerry">Mango Berry</string>
+    <string name="honey_lime_">Honey lime combo</string>
+    <string name="berry_mango">Berry mango combo</string>
+    <string name="quinoa_frui">Quinoa fruit salad</string>
+    <string name="tropical_fr">Tropical fruit salad</string>
+    <string name="melon_fruit">Melon fruit salad</string>
 </resources>
